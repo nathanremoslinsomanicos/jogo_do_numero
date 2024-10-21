@@ -6,3 +6,18 @@ let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
     const campoPalpite = document.querySelector('.campoPalpite');
     let contagemPalpites = 1;
     let botaoReiniciar;
+
+function verificarPalpite() {
+    const palpiteDoUsuario = Number(campoPalpite.value);
+    if(contagemPalpites === 1) {
+        palpites.textContent = "Palpite anteriores: ";
+    }
+
+    palpites.textContent += palpiteDoUsuario + " ";
+
+    if (palpiteDoUsuario === numeroAleatorio) {
+        ultimoResultado.textContent = "Parabéns! Você acertou!";
+        ultimoResultado.style.backgroundColor = "grenn";
+        baixoOuAlto.textContent = "";
+        finalizarJogo();
+    }
