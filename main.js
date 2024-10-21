@@ -8,16 +8,28 @@ let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
     let botaoReiniciar;
 
 function verificarPalpite() {
-    const palpiteDoUsuario = Number(campoPalpite.value);
+    const palpiteUsuario = Number(campoPalpite.value);
     if(contagemPalpites === 1) {
         palpites.textContent = "Palpite anteriores: ";
     }
 
-    palpites.textContent += palpiteDoUsuario + " ";
+    palpites.textContent += palpiteUsuario + " ";
 
-    if (palpiteDoUsuario === numeroAleatorio) {
+    if (palpiteUsuario === numeroAleatorio) {
         ultimoResultado.textContent = "Parabéns! Você acertou!";
         ultimoResultado.style.backgroundColor = "grenn";
         baixoOuAlto.textContent = "";
         finalizarJogo();
+    }   else if (contagemPalpites === 10) {
+        ultimoResultado.textContent = "FIM DE JOGO!!!";
+        baixoOuAlto.textContent = "";
+        finalizarJogo();
+    } else {
+        ultimoResultado.textContent = "Errado";
+        ultimoResultado.style.backgroundColor = "red";
+        if (palpiteUsuario) < numeroAleatorio) {
+            baixoOuAlto.textContent = "O último palpite foi muito baixo";
+        } else if (palpiteUsuario > numeroAleatorio) {
+            baixoOuAlto.textContent = "O últiom palpite foi muito alto";
+        }
     }
