@@ -33,3 +33,17 @@ function verificarPalpite() {
             baixoOuAlto.textContent = "O últiom palpite foi muito alto";
         }
     }
+    
+    contagemPalpites++;
+    campoPalpite.value = "";
+    campoPalpite.focus();
+
+
+    envioPalpite.addEventListener('click', verificarPalpite);
+
+    function finalizarJogo();
+        campoPalpite.disable = true;
+        envioPalpite.disable = true;
+        botaoReiniciar = document.createElement('button');
+}
+
