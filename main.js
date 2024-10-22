@@ -27,7 +27,7 @@ function verificarPalpite() {
     } else {
         ultimoResultado.textContent = "Errado";
         ultimoResultado.style.backgroundColor = "red";
-        if (palpiteUsuario) < numeroAleatorio) {
+        if (palpiteUsuario) < numeroAleatorio {
             baixoOuAlto.textContent = "O último palpite foi muito baixo";
         } else if (palpiteUsuario > numeroAleatorio) {
             baixoOuAlto.textContent = "O últiom palpite foi muito alto";
@@ -47,5 +47,22 @@ function verificarPalpite() {
         botaoReiniciar = document.createElement('button');
         document.body.appendChild(botaoReiniciar);
         botaoReiniciar.addEventListener('click', reiniciarJogo);
+}
+
+
+function reiniciarJogo() {
+    contagemPalpites = 1;
+    const paragrafoReiniciar = document.querySelectorAll('.paragrafosResultado p');
+    for (const paragrafoReiniciar of paragrafosReiniciar) {
+        paragrafoReiniciar.textContent = "";
+    }
+
+    botaoReiniciar.parentNode.removeChild(botaoReiniciar);
+    campoPalpite.disable = false;
+    envioPalpite.disable = false;
+    campoPalpite.value = "";
+    campoPalpite.focus();
+    ultimoResultado.style.backgroundColor = "white";
+    numeroAleatorio = Math.floor(math.random() * 100) +1
 }
 
