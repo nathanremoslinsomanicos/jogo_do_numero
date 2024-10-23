@@ -17,7 +17,7 @@ function verificarPalpite() {
     palpites.textContent += palpiteUsuario + " ";
 
      if (palpiteUsuario === numeroAleatorio) {
-        ultimoResultado.textContent = "Parabéns! Você acertou";
+        ultimoResultado.textContent = "Parabéns! Você acertou!!!";
         ultimoResultado.style.backgroundColor = "green";
         baixoOuAlto.textContent = "";
         finalizarJogo();
@@ -26,12 +26,12 @@ function verificarPalpite() {
             baixoOuAlto.textContent = "";
             finalizarJogo();
         } else {
-            ultimoResultado.textContent = "Errado seu burro!!!!!!!";
+            ultimoResultado.textContent = "ERRADO!!!!!!!";
             ultimoResultado.style.backgroundColor = "red";
             if (palpiteUsuario < numeroAleatorio) {
-                baixoOuAlto.textContent = "muito baixo, burro!!!!!!"
+                baixoOuAlto.textContent = "MUITO BAIXO!!!!!!"
             } else if (palpiteUsuario > numeroAleatorio) {
-                baixoOuAlto.textContent = "muito alto, burro!!!!!!"
+                baixoOuAlto.textContent = "MUITO ALTO!!!!!!"
             }
         }
 
