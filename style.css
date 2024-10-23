@@ -51,6 +51,9 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
+.formulario input[type="sbmit"]:hover {
+  background-color: #218838;
+}
 .ultimoResultado {
   color: white;
   padding: 3px;
