@@ -1,8 +1,8 @@
 html {
   font-family: sans-serif;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(to right, #57c5dc, #1b1b1b);
   height: 100vh;
-  display flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
