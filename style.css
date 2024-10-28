@@ -69,5 +69,18 @@ h1 {
   text-align: center;
 }
 
+.ultimoResultado.errado {
+  background-color: #dc3545;
+}
 
+.ultimoResultado.correto {
+  background-color: #28a745;
+}
+
+.botaoReiniciar {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+}
 
