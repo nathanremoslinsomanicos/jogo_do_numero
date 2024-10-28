@@ -82,5 +82,11 @@ h1 {
   margin: 20px auto;
   padding: 10px 20px;
   background-color: #007bff;
+  color: wheat;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
