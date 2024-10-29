@@ -17,12 +17,12 @@ function verificarPalpite() {
     palpites.textContent += palpiteUsuario + " ";
 
      if (palpiteUsuario === numeroAleatorio) {
-        ultimoResultado.textContent = "Parabéns! Você acertou!!!";
+        ultimoResultado.textContent = "Parabéns! Você acertou!";
         ultimoResultado.style.backgroundColor = "green";
         baixoOuAlto.textContent = "";
         finalizarJogo();
         } else if (contagemPalpites === 10) {
-            ultimoResultado.textContent = "FIM DE JOGO!!!";
+            ultimoResultado.textContent = "FIM DE JOGO!";
             baixoOuAlto.textContent = "";
             finalizarJogo();
         } else {
