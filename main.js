@@ -26,12 +26,12 @@ function verificarPalpite() {
             baixoOuAlto.textContent = "";
             finalizarJogo();
         } else {
-            ultimoResultado.textContent = "ERRADO!!!!!!!";
+            ultimoResultado.textContent = "ERRADO!";
             ultimoResultado.style.backgroundColor = "red";
             if (palpiteUsuario < numeroAleatorio) {
-                baixoOuAlto.textContent = "MUITO BAIXO!!!!!!"
+                baixoOuAlto.textContent = "MUITO BAIXO!"
             } else if (palpiteUsuario > numeroAleatorio) {
-                baixoOuAlto.textContent = "MUITO ALTO!!!!!!"
+                baixoOuAlto.textContent = "MUITO ALTO!"
             }
         }
 
